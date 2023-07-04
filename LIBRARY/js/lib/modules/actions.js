@@ -1,34 +1,77 @@
 import $ from "../core";
 
-$.prototype.on = function(eventName, callback) {
-    if(!eventName || !callback) {
-        return this; // Защита от дурака
-    }
-
+$.prototype.html = function(content) {
     for(let i = 0; i < this.length; i++) {
-        this[i].addEventListener(eventName, callback);
-    }
-    return this;
-};
-
-$.prototype.off = function(eventName, callback) {
-    if(!eventName || !callback) {
-        return this; // Защита от дурака
-    }
-
-    for(let i = 0; i < this.length; i++) {
-        this[i].removeEventListener(eventName, callback);
-    }
-    return this;
-};
-
-$.prototype.click = function(handler) {
-    for(let i = 0; i < this.length; i++) {
-        if(handler) {
-            this[i].addEventListener('click', handler);
+        if(content) {
+            this[i].innerHTML = content;
         } else {
-            this[i].click();
+            return this[i].innerHTML;
         }
     }
+
     return this;
 };
+
+$.prototype.eq = function(i) {
+    const swap = this[i],
+          objLength = Object.keys(this).length;
+
+    for(let i = 0; i < objLength; i++) {
+        delete this[i]; // объект будет пустой и мы сможем сформировать его заново
+    }
+
+    this[0] = swap;
+    this.length = 1;
+    return this;
+};
+
+$.prototype.index = function() {
+    const parent = this[0].parentNode,
+          childs = [...parent.children];
+          
+    const findMyIndex = (item) => {
+        return item == this[0];
+    };
+    
+    return childs.findIndex(findMyIndex);
+};
+
+$.prototype.find = function(selector) {
+    let numberOfItems = 0, // Общее количество которое получилось
+        counter = 0; // Количество записанных элементов
+
+    const copyObj = Object.assign({}, this);
+
+    for(let i = 0; i < copyObj.length; i++) {
+        const arr = copyObj[i].querySelectorAll(selector); // каждый элемент найденный по селектору
+        if(arr.length == 0) {
+            continue; // Пропускам итерацию
+        }
+
+        for(let j = 0; j < arr.length; j++) {
+            this[counter] = arr[j];
+            counter++;
+        }
+
+        numberOfItems += arr.length;    
+    }
+
+    this.length = numberOfItems;
+
+    const objLength = Object.keys(this).length;
+    for(; numberOfItems < objLength; numberOfItems++) {
+        delete this[numberOfItems];
+    }
+
+    return this;
+};
+
+
+
+
+
+
+
+
+
+
