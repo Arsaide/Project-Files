@@ -1,0 +1,77 @@
+{
+  "menu": [
+    {
+      "img": "img/card/card1.jpg",
+      "altimg": "Recruit",
+      "title": "Menu 'Recruit'",
+      "descr": "The 'Recruit' Menu is a new approach to teaching more fresh vegetables and beer people. This is our absolutely new service with the best price and high quality!",
+      "price": 9
+    },
+    {
+      "img": "img/card/card2.jpg",
+      "altimg": "Legend",
+      "title": "Menu 'Legend'",
+      "descr": "Menu 'Legend' is a new approach to training people more advanced than recruits. This is our brand new service with best price and high quality!",
+      "price": 14
+    },
+    {
+      "img": "img/card/card3.jpg",
+      "altimg": "Titan",
+      "title": "Menu 'Titan'",
+      "descr": "The Titan menu is a terrible approach to teaching people more advanced than legends. WHY DO YOU NEED IT? This is our new service with best price and high quality!",
+      "price": 21
+    }
+  ],
+  "requests": [
+    {
+      "name": "3424",
+      "phone": "432423",
+      "id": 1
+    },
+    {
+      "name": "gfgd",
+      "phone": "12312fdfd",
+      "id": 2
+    },
+    {
+      "name": "hhgjhjk",
+      "phone": "hjkhk",
+      "id": 3
+    },
+    {
+      "name": "uhkjhkj",
+      "phone": "76876868",
+      "id": 4
+    },
+    {
+      "name": "423",
+      "phone": "4fdsf",
+      "id": 5
+    },
+    {
+      "name": "fsdfsdf",
+      "phone": "3123123",
+      "id": 6
+    },
+    {
+      "name": "fsdfsdf",
+      "phone": "3123123",
+      "id": 7
+    },
+    {
+      "name": "fsdfsdf",
+      "phone": "312312",
+      "id": 8
+    },
+    {
+      "name": "fsdfsdf",
+      "phone": "312312",
+      "id": 9
+    },
+    {
+      "name": "fsdfsdf",
+      "phone": "312312",
+      "id": 10
+    }
+  ]
+}
