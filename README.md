@@ -10,3 +10,9 @@ JS-UI library files will also be published.
 Тут будуть опубліковані різні файли модулів з проектів, які я пройшов на курсі Івана Петриченка "Практичний Java Script".
 
 Також буде опубліковані файли JS-UI бібліотеки.
+
+
+# Library Documentation
+## 1. Functions 
+
+1.
