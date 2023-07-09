@@ -28,6 +28,10 @@ HTML:
                 <div class="card-title">#Card-title</div>
                 <p class="card-text">Lorem ipsum</p>
                 <a href="#" class="btn *btn-primary*">LINK</a>
+
+                <!-- Для модального окна вызова -->
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>   
+                
             </div>
         </div>
     </div>
@@ -41,9 +45,11 @@ data-close - дата атрибут при нажатии на который �
 
 data-target -  уникальный id для инициализации модального окна
 
-data-toggle - класс для инициализации модального окна
+data-toggle - обязательные класс модального окна
 
 HTML - триггер для вызова модального окна:
+
+*Может быть любым блоком! <button>, <div>, <a> ect...*
 
     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>
 
