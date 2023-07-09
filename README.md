@@ -13,6 +13,56 @@ JS-UI library files will also be published.
 
 
 # Library Documentation
-## 1. Functions 
+## 1. HTML - компоненты
 
-1.
+CARD:
+
+** *class* ** - не обязательные классы
+
+HTML:
+
+    <div class="NAME-WRAPPER d-flex *f-space-around*">
+        <div class="card">
+            <img class="card-img" src="SRC" alt="PHOTO">
+            <div class="card-body">
+                <div class="card-title">#Card-title</div>
+                <p class="card-text">Lorem ipsum</p>
+                <a href="#" class="btn *btn-primary*">LINK</a>
+            </div>
+        </div>
+    </div>
+
+MODAL WINDOW: (/sass/)
+
+*class* - не обязательные классы
+
+data-close - дата атрибут при нажатии на который закрывается модальное окно
+
+
+data-target -  уникальный id для инициализации модального окна
+
+data-toggle - класс для инициализации модального окна
+
+HTML - триггер для вызова модального окна:
+
+    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>
+
+HTML - карточки: 
+
+    <div class="modal" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="close" data-close>
+                    <span>&times;</span> <!-- Крестик -->
+                </button>
+                <div class="modal-header">
+                    <div class="modal-title">#TITLE</div>
+                </div>
+                <div class="modal-body">#TEXT</div>
+                <div class="modal-footer">
+                    *<button class="btn *btn-danger*" data-close>Close</button>*
+                    *<button class="btn *btn-success*">Save changes</button>*
+                </div>
+            </div>
+        </div>
+    </div>
