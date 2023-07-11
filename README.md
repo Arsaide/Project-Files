@@ -11,11 +11,12 @@ JS-UI library files will also be published.
 
 Також буде опубліковані файли JS-UI бібліотеки.
 
-
 # Library Documentation
+
 ## 1. HTML - компоненты
 
-CARD:
+<details>
+<summary>CARD</summary>
 
 ** *class* ** - не обязательные классы
 
@@ -36,9 +37,11 @@ HTML:
         </div>
     </div>
 
-MODAL WINDOW: (/sass/)
+</details>
+<details>
+<summary>#MODAL WINDOW: (/sass/)</summary>
 
-*class* - не обязательные классы
+** *class* ** - не обязательные классы
 
 data-close - дата атрибут при нажатии на который закрывается модальное окно
 
@@ -49,7 +52,7 @@ data-toggle - обязательные класс модального окна
 
 HTML - триггер для вызова модального окна:
 
-*Может быть любым блоком! <button>, <div>, <a> ect...*
+*Может быть любым блоком! <button>, <div>, <a>*
 
     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>
 
@@ -72,3 +75,38 @@ HTML - карточки:
             </div>
         </div>
     </div>
+
+</details>
+
+
+<details>
+<summary>DYNAMIC MODAL WINDOW</summary>
+
+JS code:
+
+    $('#trigger').click(() => $('#trigger').createModal({ // #trigger - уникальный индифакатор кнопки запуска модального окна
+        text: {
+            title: 'Modal title',   // заголовок кнопки
+            body: 'Lorem ipsum...'  // текст, содержимое кнопки
+        },
+        btns: {
+            count: 3,
+            settings: [
+                [
+                    'Name button',
+                    ['btn-danger', 'mr-10'],    // Классы кнопок
+                    true    // Добавления атрибута data-close
+                ],
+                [
+                    'Name button',
+                    ['btn-success'],    // Классы кнопок
+                    false,  // Добавления атрибута data-close
+                    () => {
+                        alert('Данные сохранены');
+                    }   // callback функция при нажатии на кнопку
+                ],
+            ]
+        }
+    }));
+
+</details>
