@@ -1,24 +1,21 @@
-# Project Files
-Files from projects "Practical Java Script"
-
-# Eng description
-Here will be published various module files from the projects I completed in Ivan Petrichenko's "Practical Java Script" course.
-
-JS-UI library files will also be published.
-
-# UA description
-Тут будуть опубліковані різні файли модулів з проектів, які я пройшов на курсі Івана Петриченка "Практичний Java Script".
-
-Також буде опубліковані файли JS-UI бібліотеки.
-
 # Library Documentation
+
+## JS - фукнции
+
+1. eq(1) - номер элемента по порядку
+2. find('.elem') - поиск элемента
+3. closest('.elem') - 
+4. siblings() - все остольные элементы
+5. addClass('class') - добавляет класс
+6. removeClass('class') - убирает класс
+7. click(callback) -  аналог функция addEventListener('click' callback)
+8. on(eventName, callback) - aналог функции addEventListener(eventName, callback);
+9. off(eventName, callback) - addEventListener(eventName, callback);
 
 ## 1. HTML - компоненты
 
 <details>
 <summary>CARD</summary>
-
-** *class* ** - не обязательные классы
 
 HTML:
 
@@ -39,9 +36,7 @@ HTML:
 
 </details>
 <details>
-<summary>#MODAL WINDOW: (/sass/)</summary>
-
-** *class* ** - не обязательные классы
+<summary>MODAL WINDOW: (/sass/)</summary>
 
 data-close - дата атрибут при нажатии на который закрывается модальное окно
 
@@ -108,5 +103,109 @@ JS code:
             ]
         }
     }));
+
+</details>
+
+<details>
+<summary>TABS</summary>
+
+Внутырь панельки так же можно поместить dropdown menu
+
+data-tabpanel - тег по которому работают табы
+
+tab-content__active - класс активности контента
+
+tab-item__active - класс активности элеметов панельки
+
+HTML - код табов:
+
+    <div class="tab mt-20 block-center">
+        <div class="tab-panel" data-tabpanel>
+            <div class="tab-item tab-item__active">Content 1</div>
+            <div class="tab-item">Content 2</div>
+            <div class="tab-item">Content 3</div>
+        </div>
+
+        <div class="tab-content tab-content__active"> <!-- табы -->
+            Lorem ipsum text
+        </div>
+
+        <div class="tab-content"> <!-- табы -->
+            Lorem ipsum text                   
+        </div>
+
+        <div class="tab-content "> <!-- табы -->
+            Lorem ipsum text
+        </div>
+
+    </div>
+
+</details>
+
+
+<details>
+<summary>Accordions</summary>
+
+
+
+HTML - code accordions:
+
+    <div class="accordion block-center">
+        <div class="accordion-head">
+            <span>Collapse first elem</span>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-inner">
+                Text   
+            </div>
+        </div>
+
+        <div class="accordion-head">
+            <span>Collapse second elem</span>
+        </div>
+        <div class="accordion-content">
+            <div class="accordion-inner">
+                Text  
+            </div>
+        </div>
+    </div>
+
+</details>
+
+<details>
+<summary>Slider</summary>
+
+
+HTML - code sliders;
+
+    <div class="carousel" id="example">
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0"></li>
+            <li data-slide-to="1"></li>
+            <li data-slide-to="2"></li>
+        </ol>
+        
+        <div class="carousel-inner">
+            <div class="carousel-slides">
+                <div class="carousel-item">
+                    <img src="" alt="photo">
+                </div>
+                <div class="carousel-item">
+                    <img src="" alt="photo">
+                </div>
+                <div class="carousel-item">
+                     <img src="" alt="photo">
+                </div>
+            </div>
+        </div>
+        
+        <a href="#" class="carousel-prev" data-slide="prev">
+            <span class="carousel-prev-icon">&lt;</span>
+        </a>
+        <a href="#" class="carousel-next" data-slide="next">
+            <span class="carousel-next-icon">&gt;</span>
+        </a>
+        
+    </div>
 
 </details>
