@@ -171,3 +171,41 @@ HTML - code accordions:
     </div>
 
 </details>
+
+<details>
+<summary>Slider</summary>
+
+
+HTML - code sliders;
+
+    <div class="carousel" id="example">
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0"></li>
+            <li data-slide-to="1"></li>
+            <li data-slide-to="2"></li>
+        </ol>
+        
+        <div class="carousel-inner">
+            <div class="carousel-slides">
+                <div class="carousel-item">
+                    <img src="" alt="photo">
+                </div>
+                <div class="carousel-item">
+                    <img src="" alt="photo">
+                </div>
+                <div class="carousel-item">
+                     <img src="" alt="photo">
+                </div>
+            </div>
+        </div>
+        
+        <a href="#" class="carousel-prev" data-slide="prev">
+            <span class="carousel-prev-icon">&lt;</span>
+        </a>
+        <a href="#" class="carousel-next" data-slide="next">
+            <span class="carousel-next-icon">&gt;</span>
+        </a>
+        
+    </div>
+
+</details>
