@@ -10,7 +10,7 @@ $.prototype.modal = function(created) {
             document.body.style.overflow = "hidden";
             document.body.style.marginRight = `${scroll}px`;
         });
-
+        
         // target - уникальный индифакатор
         // Скрытие модального окна
         const closeElements = document.querySelectorAll(`${target} [data-close]`);
